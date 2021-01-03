@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Publisher } from '../models/publisher';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PublisherService {
+
+  private publisherURL = "http://localhost:8080/publishers"
+
+  constructor(private http: HttpClient) { }
+
+  getPublishers(): Observable<Publisher[]>{
+    return this.http.get<Publisher[]>(this.publisherURL);
+  }
+
+}

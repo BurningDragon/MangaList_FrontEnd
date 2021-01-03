@@ -1,0 +1,11 @@
+#publishers-row{
+    margin-top:2%;
+}
+#publishers-list-body{
+    max-height: 80vh;
+    overflow:auto;
+}
+
+#publisher{
+    margin-bottom: 2%;
+}
