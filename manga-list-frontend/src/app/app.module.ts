@@ -7,11 +7,13 @@ import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PublishersComponent } from './publishers/publishers.component';
+import { PublisherDetailComponent } from './publisher-detail/publisher-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PublishersComponent
+    PublishersComponent,
+    PublisherDetailComponent
   ],
   imports: [
     BrowserModule,
