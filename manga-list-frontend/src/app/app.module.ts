@@ -10,6 +10,8 @@ import { PublishersComponent } from './publishers/publishers.component';
 import { PublisherDetailComponent } from './publisher-detail/publisher-detail.component';
 import { MangasComponent } from './mangas/mangas.component';
 import { MangaDetailComponent } from './manga-detail/manga-detail.component';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorDetailComponent } from './author-detail/author-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MangaDetailComponent } from './manga-detail/manga-detail.component';
     PublishersComponent,
     PublisherDetailComponent,
     MangasComponent,
-    MangaDetailComponent
+    MangaDetailComponent,
+    AuthorsComponent,
+    AuthorDetailComponent
   ],
   imports: [
     BrowserModule,
