@@ -1,0 +1,34 @@
+#publisher-details{
+    margin-top: 2%;
+}
+
+#website-row{
+    margin-top: 5%;
+}
+
+#available-mangas{
+    margin-top: 1%;
+}
+
+#manga-image{
+    height: 25%;
+    width: 25%;
+}
+
+#manga-body{
+    margin-left:2%;
+}
+
+#manga{
+    margin-bottom: 2%;
+}
+
+#list-manga{
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.card-horizontal{
+    display: flex;
+    flex: 1 1 auto;
+}

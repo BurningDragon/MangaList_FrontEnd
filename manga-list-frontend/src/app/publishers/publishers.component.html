@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row" id="publishers-row">
+        <div class="col-3">
+            <div class="card" id="search">
+                <div class="card-header bg-primary text-white">Search</div>
+                <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Search...." [(ngModel)]="filterTerm">
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="card border-0" id="publishers-list">
+                <div class="card-body" id="publishers-list-body">
+                    <p *ngIf="publishers?.length == 0">No publishers are found</p>
+                    <div class="card" id="publisher" *ngFor="let publisher of publishers | filter:filterTerm">
+                        <div class="card-body" [routerLink]="['/publishers', publisher.id]">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col">Name:</div>
+                                  <div class="col">{{publisher.name}}</div>
+                              </div>
+                              <div class="row">
+                                <div class="col">Website:</div>
+                                <div class="col"><a href="{{publisher.websiteURL}}">{{publisher.websiteURL}}</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+        <div class="col"></div>
+        
+    </div>
+</div>

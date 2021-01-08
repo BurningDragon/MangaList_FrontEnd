@@ -1,0 +1,23 @@
+#mangas-list-body{
+    max-height: 80vh;
+    overflow: auto;
+}
+
+#manga-image{
+    height: 25%;
+    width: 25%;
+}
+
+#manga{
+    margin-bottom: 2%;
+}
+
+#manga-row{
+    margin-top: 2%;
+}
+
+.card-horizontal{
+    display: flex;
+    flex: 1 1 auto;
+    cursor: pointer;
+}

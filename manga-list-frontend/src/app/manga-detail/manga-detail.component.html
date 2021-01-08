@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row" id="manga-detail-row">
+        <div class="col-4">
+            <img src="../../assets/placeholder-image.png" class="img-fluid" alt="Manga Cover" id="manga-image">
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{manga?.title}}</h5>
+                    <div class="card-text" style="white-space:pre-wrap">{{manga?.description}}</div>
+                    <div class="card-text" id="author-illustrator-row">
+                        <div class="row" id="author-row">
+                            <div class="col">Author:</div>
+                            <div class="col">{{manga?.author?.firstname}} {{manga?.author?.lastname}}</div>
+                        </div>
+                        <div class="row" id="illustrator-row">
+                            <div class="col">Illustrator:</div>
+                            <div class="col">{{manga?.illustrator?.firstname}} {{manga?.illustrator?.lastname}}</div>
+                        </div>
+                        <div class="row" id="publisher-row">
+                            <div class="col">Publisher:</div>
+                            <div class="col" ><a [routerLink]="['/publishers', manga?.publisher?.id]" >{{manga?.publisher?.name}}</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

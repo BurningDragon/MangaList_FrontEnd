@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row" id="manga-row">
+        <div class="col-3">
+            <div class="card" id="search">
+                <div class="card-header bg-primary text-white">Search</div>
+                <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Search...." [(ngModel)]="filterTerm">
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="card border-0" id="mangas-list">
+                <div class="card-body" id="mangas-list-body">
+                    <p *ngIf="mangas?.length == 0">No mangas are found</p>
+                    <div class="card" id="manga" *ngFor="let manga of mangas | filter:filterTerm">
+                        <div class="card-horizontal" [routerLink]="['/mangas', manga.id]" >
+                            <img class="card-img-left" src="../../assets/placeholder-image.png" alt="Manga Cover" id="manga-image">
+                            <div class="body" id="manga-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title">{{manga.title}}</h5>
+                                        </div>
+                                </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">Author:</div>
+                                        <div class="Col">{{manga.author.firstname}} {{manga.author.lastname}}</div>
+                                    </div>
+                                    <div class="row" *ngIf="manga.coAuthor != null">
+                                        <div class="col">Co-Author:</div>
+                                        <div class="Col">{{manga.coAuthor.firstname}} {{manga.coAuthor.lastname}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Illustrator:</div>
+                                        <div class="Col">{{manga.illustrator.firstname}} {{manga.illustrator.lastname}}</div>
+                                    </div>
+                                    <div class="row" *ngIf="manga.coIllustrator != null">
+                                        <div class="col">Co-Illustrator:</div>
+                                        <div class="Col">{{manga.coIllustrator.firstname}} {{manga.coIllustrator.lastname}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Publisher:</div>
+                                        <div class="Col">{{manga.publisher.name}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+        <div class="col"></div>
+        
+    </div>
+</div>
+
