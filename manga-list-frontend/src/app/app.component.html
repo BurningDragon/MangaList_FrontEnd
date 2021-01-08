@@ -1,11 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Manga List</a>
+  <a class="navbar-brand" routerLink="/mangas">Manga List</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-content" aria-controls="menu-content" aria-expanded="false" aria-label="Toggle Navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="menu-content">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link"routerLink="/mangas" routerLinkActive="active">Mangas</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link"routerLink="/publishers" routerLinkActive="active">Publishers</a>
       </li>

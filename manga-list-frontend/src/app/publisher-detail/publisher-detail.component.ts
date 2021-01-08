@@ -34,10 +34,7 @@ export class PublisherDetailComponent implements OnInit {
   }
 
   getMangasForPublisher(){
-    this.mangaService.getMangasByPublisherID(this.id).subscribe(mangas => {
-      this.mangas = mangas
-      console.log(this.mangas);
-    });
+    this.mangaService.getMangasByPublisherID(this.id).subscribe(mangas => this.mangas = mangas);
   }
 
 }

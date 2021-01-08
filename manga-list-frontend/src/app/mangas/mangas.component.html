@@ -1,31 +1,19 @@
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card" id="publisher-details">
+    <div class="row" id="manga-row">
+        <div class="col-3">
+            <div class="card" id="search">
+                <div class="card-header bg-primary text-white">Search</div>
                 <div class="card-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">Name:</div>
-                        </div>
-                        <div class="row">
-                            <div class="col">{{publisher.name}}</div>
-                        </div>
-                        <div class="row" id="website-row">
-                            <div class="col">Website:</div>
-                        </div>
-                        <div class="row">
-                            <div class="col"><a href="{{publisher.websiteURL}}">{{publisher.websiteURL}}</a></div>
-                        </div>
-                    </div>
+                    <input type="text" class="form-control" placeholder="Search...." [(ngModel)]="filterTerm">
                 </div>
             </div>
         </div>
         <div class="col-8">
-            <div class="card" id="available-mangas">
-                <div class="card-header bg-primary text-white">Available mangas from {{publisher.name}}</div>
-                <div class="card-body" id="list-manga">
-                    <div class="card" id="manga" *ngFor="let manga of mangas">
-                        <div class="card-horizontal">
+            <div class="card border-0" id="mangas-list">
+                <div class="card-body" id="mangas-list-body">
+                    <p *ngIf="mangas?.length == 0">No mangas are found</p>
+                    <div class="card" id="manga" *ngFor="let manga of mangas | filter:filterTerm">
+                        <div class="card-horizontal" [routerLink]="['/mangas', manga.id]" >
                             <img class="card-img-left" src="../../assets/placeholder-image.png" alt="Manga Cover" id="manga-image">
                             <div class="body" id="manga-body">
                                 <div class="container">
@@ -52,13 +40,19 @@
                                         <div class="col">Co-Illustrator:</div>
                                         <div class="Col">{{manga.coIllustrator.firstname}} {{manga.coIllustrator.lastname}}</div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col">Publisher:</div>
+                                        <div class="Col">{{manga.publisher.name}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+              </div>
         </div>
         <div class="col"></div>
+        
     </div>
 </div>
+
