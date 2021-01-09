@@ -21,7 +21,7 @@
                             <div class="col">Illustrator:</div>
                             <div class="col"><a [routerLink]="['/illustrators', manga?.illustrator?.id]" >{{manga?.illustrator?.firstname}} {{manga?.illustrator?.lastname}}</a></div>
                         </div>
-                        <div class="row" id="co-illustrator-row" *ngIf="magna?.coIllustrator != null">
+                        <div class="row" id="co-illustrator-row" *ngIf="manga?.coIllustrator != null">
                             <div class="col">Co-Illustrator:</div>
                             <div class="col"><a [routerLink]="['/illustrators', manga?.coIllustrator?.id]" >{{manga?.coIllustrator?.firstname}} {{manga?.coIllustrator?.lastname}}</a></div>
                         </div>
