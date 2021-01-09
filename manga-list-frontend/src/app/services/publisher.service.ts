@@ -8,7 +8,7 @@ import { Publisher } from '../models/publisher';
 })
 export class PublisherService {
 
-  private publisherURL = 'http://localhost:8080/publishers/'
+  private publisherURL = 'http://192.168.178.73:8080/publishers/'
 
   constructor(private http: HttpClient) { }
 

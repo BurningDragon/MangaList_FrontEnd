@@ -1,1 +1,57 @@
-<p>author-detail works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-3">
+            <div class="card" id="publisher-details">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">Author:</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">{{author.firstname}} {{author.lastname}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="card" id="available-mangas">
+                <div class="card-header bg-primary text-white">Available mangas from {{author.firstname}} {{author.lastname}}</div>
+                <div class="card-body" id="list-manga">
+                    <div class="card" id="manga" *ngFor="let manga of mangas">
+                        <div class="card-horizontal" [routerLink]="['/mangas', manga.id]">
+                            <img class="card-img-left" src="../../assets/placeholder-image.png" alt="Manga Cover" id="manga-image">
+                            <div class="body" id="manga-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title">{{manga.title}}</h5>
+                                        </div>
+                                </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">Author:</div>
+                                        <div class="col">{{manga.author.firstname}} {{manga.author.lastname}}</div>
+                                    </div>
+                                    <div class="row" *ngIf="manga.coAuthor != null">
+                                        <div class="col">Co-Author:</div>
+                                        <div class="col">{{manga.coAuthor.firstname}} {{manga.coAuthor.lastname}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">Illustrator:</div>
+                                        <div class="col">{{manga.illustrator.firstname}} {{manga.illustrator.lastname}}</div>
+                                    </div>
+                                    <div class="row" *ngIf="manga.coIllustrator != null">
+                                        <div class="col">Co-Illustrator:</div>
+                                        <div class="col">{{manga.coIllustrator.firstname}} {{manga.coIllustrator.lastname}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

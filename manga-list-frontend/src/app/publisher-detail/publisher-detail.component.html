@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-3">
             <div class="card" id="publisher-details">
                 <div class="card-body">
                     <div class="container">
@@ -20,12 +20,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-md-6 col-sm-6">
             <div class="card" id="available-mangas">
                 <div class="card-header bg-primary text-white">Available mangas from {{publisher.name}}</div>
                 <div class="card-body" id="list-manga">
                     <div class="card" id="manga" *ngFor="let manga of mangas">
-                        <div class="card-horizontal">
+                        <div class="card-horizontal" [routerLink]="['/mangas', manga.id]">
                             <img class="card-img-left" src="../../assets/placeholder-image.png" alt="Manga Cover" id="manga-image">
                             <div class="body" id="manga-body">
                                 <div class="container">
@@ -38,19 +38,19 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col">Author:</div>
-                                        <div class="Col">{{manga.author.firstname}} {{manga.author.lastname}}</div>
+                                        <div class="col">{{manga.author.firstname}} {{manga.author.lastname}}</div>
                                     </div>
                                     <div class="row" *ngIf="manga.coAuthor != null">
                                         <div class="col">Co-Author:</div>
-                                        <div class="Col">{{manga.coAuthor.firstname}} {{manga.coAuthor.lastname}}</div>
+                                        <div class="col">{{manga.coAuthor.firstname}} {{manga.coAuthor.lastname}}</div>
                                     </div>
                                     <div class="row">
                                         <div class="col">Illustrator:</div>
-                                        <div class="Col">{{manga.illustrator.firstname}} {{manga.illustrator.lastname}}</div>
+                                        <div class="col">{{manga.illustrator.firstname}} {{manga.illustrator.lastname}}</div>
                                     </div>
                                     <div class="row" *ngIf="manga.coIllustrator != null">
                                         <div class="col">Co-Illustrator:</div>
-                                        <div class="Col">{{manga.coIllustrator.firstname}} {{manga.coIllustrator.lastname}}</div>
+                                        <div class="col">{{manga.coIllustrator.firstname}} {{manga.coIllustrator.lastname}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -59,6 +59,5 @@
                 </div>
             </div>
         </div>
-        <div class="col"></div>
     </div>
 </div>

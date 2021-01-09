@@ -7,11 +7,16 @@ import { Author } from '../models/author';
   providedIn: 'root'
 })
 export class AuthorService {
-  private authorURL = "http://localhost:8080/authors/"
+  private authorURL = "http://192.168.178.73:8080/authors/"
   
   constructor(private http: HttpClient) { }
 
   getAllAuthors(): Observable<Author[]>{
     return this.http.get<Author[]>(this.authorURL);
+  }
+
+  getAuthorByID(id: number):Observable<Author>{
+    const url = this.authorURL + id;
+    return this.http.get<Author>(url);
   }
 }
