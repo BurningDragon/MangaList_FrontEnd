@@ -1,0 +1,12 @@
+#illustrator-row{
+    margin-top:2%;
+}
+#illustrator-list-body{
+    max-height: 80vh;
+    overflow:auto;
+}
+
+#illustrator{
+    margin-bottom: 2%;
+    cursor: pointer;
+}

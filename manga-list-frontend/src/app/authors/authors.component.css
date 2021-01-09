@@ -1,0 +1,12 @@
+#authors-row{
+    margin-top:2%;
+}
+#authors-list-body{
+    max-height: 80vh;
+    overflow:auto;
+}
+
+#author{
+    margin-bottom: 2%;
+    cursor: pointer;
+}

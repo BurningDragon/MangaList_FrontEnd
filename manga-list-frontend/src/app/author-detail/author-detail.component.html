@@ -5,16 +5,10 @@
                 <div class="card-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col">Name:</div>
+                            <div class="col">Author:</div>
                         </div>
                         <div class="row">
-                            <div class="col">{{publisher.name}}</div>
-                        </div>
-                        <div class="row" id="website-row">
-                            <div class="col">Website:</div>
-                        </div>
-                        <div class="row">
-                            <div class="col"><a href="{{publisher.websiteURL}}">{{publisher.websiteURL}}</a></div>
+                            <div class="col">{{author.firstname}} {{author.lastname}}</div>
                         </div>
                     </div>
                 </div>
@@ -22,7 +16,7 @@
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="card" id="available-mangas">
-                <div class="card-header bg-primary text-white">Available mangas from {{publisher.name}}</div>
+                <div class="card-header bg-primary text-white">Available mangas from {{author.firstname}} {{author.lastname}}</div>
                 <div class="card-body" id="list-manga">
                     <div class="card" id="manga" *ngFor="let manga of mangas">
                         <div class="card-horizontal" [routerLink]="['/mangas', manga.id]">

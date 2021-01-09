@@ -1,9 +1,9 @@
-<div class="container">
-    <div class="row" id="manga-detail-row">
-        <div class="col-4">
+<div class="container-fluid">
+    <div class="row justify-content-center" id="manga-detail-row">
+        <div class="col-md-3 col-sm-1">
             <img src="../../assets/placeholder-image.png" class="img-fluid" alt="Manga Cover" id="manga-image">
         </div>
-        <div class="col-6">
+        <div class="col-md-5 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{manga?.title}}</h5>
@@ -11,11 +11,19 @@
                     <div class="card-text" id="author-illustrator-row">
                         <div class="row" id="author-row">
                             <div class="col">Author:</div>
-                            <div class="col">{{manga?.author?.firstname}} {{manga?.author?.lastname}}</div>
+                            <div class="col"><a [routerLink]="['/authors', manga?.author?.id]" >{{manga?.author?.firstname}} {{manga?.author?.lastname}}</a></div>
+                        </div>
+                        <div class="row" id="co-author-row" *ngIf="manga?.coAuthor != null">
+                            <div class="col">Co-Author:</div>
+                            <div class="col"><a [routerLink]="['/authors', manga?.coAuthor?.id]" >{{manga?.coAuthor?.firstname}} {{manga?.coAuthor?.lastname}}</a></div>
                         </div>
                         <div class="row" id="illustrator-row">
                             <div class="col">Illustrator:</div>
-                            <div class="col">{{manga?.illustrator?.firstname}} {{manga?.illustrator?.lastname}}</div>
+                            <div class="col"><a [routerLink]="['/illustrators', manga?.illustrator?.id]" >{{manga?.illustrator?.firstname}} {{manga?.illustrator?.lastname}}</a></div>
+                        </div>
+                        <div class="row" id="co-illustrator-row" *ngIf="manga?.coIllustrator != null">
+                            <div class="col">Co-Illustrator:</div>
+                            <div class="col"><a [routerLink]="['/illustrators', manga?.coIllustrator?.id]" >{{manga?.coIllustrator?.firstname}} {{manga?.coIllustrator?.lastname}}</a></div>
                         </div>
                         <div class="row" id="publisher-row">
                             <div class="col">Publisher:</div>
@@ -25,6 +33,5 @@
                 </div>
             </div>
         </div>
-        <div class="col"></div>
     </div>
 </div>

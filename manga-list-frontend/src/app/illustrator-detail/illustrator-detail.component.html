@@ -1,20 +1,14 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-3 col-sm-3">
-            <div class="card" id="publisher-details">
+            <div class="card" id="illustrator-details">
                 <div class="card-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col">Name:</div>
+                            <div class="col">Illustrator:</div>
                         </div>
                         <div class="row">
-                            <div class="col">{{publisher.name}}</div>
-                        </div>
-                        <div class="row" id="website-row">
-                            <div class="col">Website:</div>
-                        </div>
-                        <div class="row">
-                            <div class="col"><a href="{{publisher.websiteURL}}">{{publisher.websiteURL}}</a></div>
+                            <div class="col">{{illustrator.firstname}} {{illustrator.lastname}}</div>
                         </div>
                     </div>
                 </div>
@@ -22,7 +16,7 @@
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="card" id="available-mangas">
-                <div class="card-header bg-primary text-white">Available mangas from {{publisher.name}}</div>
+                <div class="card-header bg-primary text-white">Available mangas from {{illustrator.firstname}} {{illustrator.lastname}}</div>
                 <div class="card-body" id="list-manga">
                     <div class="card" id="manga" *ngFor="let manga of mangas">
                         <div class="card-horizontal" [routerLink]="['/mangas', manga.id]">

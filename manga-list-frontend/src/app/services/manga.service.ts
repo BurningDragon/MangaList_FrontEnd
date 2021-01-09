@@ -7,7 +7,7 @@ import { Manga } from '../models/manga';
   providedIn: 'root'
 })
 export class MangaService {
-  private mangasURL = "http://localhost:8080/mangas/"
+  private mangasURL = "http://192.168.178.73:8080/mangas/"
 
   constructor(private http: HttpClient) { }
 
@@ -23,5 +23,15 @@ export class MangaService {
   getMangaByID(id: number){
     const url = this.mangasURL + id;
     return this.http.get<Manga>(url);
+  }
+
+  getMangasByAuthorID(id:number){
+    const url = this.mangasURL+ "by-author/" + id;
+    return this.http.get<Manga[]>(url);
+  }
+
+  getMangasByIllustratorID(id:number){
+    const url = this.mangasURL+ "by-illustrator/" + id;
+    return this.http.get<Manga[]>(url);
   }
 }
