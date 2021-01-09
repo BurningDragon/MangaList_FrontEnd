@@ -28,6 +28,10 @@ export class MangaService {
   getMangasByAuthorID(id:number){
     const url = this.mangasURL+ "by-author/" + id;
     return this.http.get<Manga[]>(url);
-    
+  }
+
+  getMangasByIllustratorID(id:number){
+    const url = this.mangasURL+ "by-illustrator/" + id;
+    return this.http.get<Manga[]>(url);
   }
 }

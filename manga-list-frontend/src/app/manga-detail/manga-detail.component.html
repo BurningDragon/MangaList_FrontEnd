@@ -13,9 +13,17 @@
                             <div class="col">Author:</div>
                             <div class="col"><a [routerLink]="['/authors', manga?.author?.id]" >{{manga?.author?.firstname}} {{manga?.author?.lastname}}</a></div>
                         </div>
+                        <div class="row" id="co-author-row" *ngIf="manga?.coAuthor != null">
+                            <div class="col">Co-Author:</div>
+                            <div class="col"><a [routerLink]="['/authors', manga?.coAuthor?.id]" >{{manga?.coAuthor?.firstname}} {{manga?.coAuthor?.lastname}}</a></div>
+                        </div>
                         <div class="row" id="illustrator-row">
                             <div class="col">Illustrator:</div>
-                            <div class="col">{{manga?.illustrator?.firstname}} {{manga?.illustrator?.lastname}}</div>
+                            <div class="col"><a [routerLink]="['/illustrators', manga?.illustrator?.id]" >{{manga?.illustrator?.firstname}} {{manga?.illustrator?.lastname}}</a></div>
+                        </div>
+                        <div class="row" id="co-illustrator-row" *ngIf="magna?.coIllustrator != null">
+                            <div class="col">Co-Illustrator:</div>
+                            <div class="col"><a [routerLink]="['/illustrators', manga?.coIllustrator?.id]" >{{manga?.coIllustrator?.firstname}} {{manga?.coIllustrator?.lastname}}</a></div>
                         </div>
                         <div class="row" id="publisher-row">
                             <div class="col">Publisher:</div>

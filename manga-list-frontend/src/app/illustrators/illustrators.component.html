@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row justify-content-center" id="illustrator-row">
+        <div class="col-md-3 col-sm-3">
+            <div class="card" id="search">
+                <div class="card-header bg-primary text-white">Search</div>
+                <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Search...." [(ngModel)]="filterTerm">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="card border-0" id="illustrator-list">
+                <div class="card-body" id="illustrator-list-body">
+                    <p *ngIf="illustrators?.length == 0">No illustrators are found</p>
+                    <div class="card" id="illustrator" *ngFor="let illustrator of illustrators | filter:filterTerm">
+                        <div class="card-body" [routerLink]="['/illustrators', illustrator.id]">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col">{{illustrator.firstname}} {{illustrator.lastname}}</div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>        
+    </div>
+</div>
