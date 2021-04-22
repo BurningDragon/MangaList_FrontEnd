@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row justify-content-center" id="title-row">
+        <h3>Login with your account</h3>
+    </div>
+    <div class="row justify-content-center" id="login-row">
+        <div class="col-md-4 col-sm-4">
+            <div class="alert alert-danger" role="alert" *ngIf="loginFailed">
+                Login failed. Email or password is incorrect.
+              </div>
+        <form>
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" [(ngModel)]="username">
+              </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name ="password" placeholder="Password" [(ngModel)] ="password">
+            </div>
+            <button type="button" class="btn btn-primary float-right" (click)= "login()">Login</button>
+          </form>
+        </div>
+    </div>
+</div>

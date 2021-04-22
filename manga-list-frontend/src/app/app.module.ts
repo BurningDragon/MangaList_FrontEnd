@@ -16,6 +16,7 @@ import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { IllustratorsComponent } from './illustrators/illustrators.component';
 import { IllustratorDetailComponent } from './illustrator-detail/illustrator-detail.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     AuthorDetailComponent,
     IllustratorsComponent,
     IllustratorDetailComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

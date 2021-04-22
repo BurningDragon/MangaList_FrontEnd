@@ -27,4 +27,9 @@ export class UserService {
     const url = this.authURL + "signup";
     return this.http.post<any>(url, user);
   }
+
+  login(username: String, password: String) : Observable<any>{
+    const url = this.authURL + "signin";
+    return this.http.post<any>(url, {username, password});
+  }
 }

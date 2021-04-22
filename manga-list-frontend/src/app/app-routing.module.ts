@@ -4,6 +4,7 @@ import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { IllustratorDetailComponent } from './illustrator-detail/illustrator-detail.component';
 import { IllustratorsComponent } from './illustrators/illustrators.component';
+import { LoginComponent } from './login/login.component';
 import { MangaDetailComponent } from './manga-detail/manga-detail.component';
 import { MangasComponent } from './mangas/mangas.component';
 import { PublisherDetailComponent } from './publisher-detail/publisher-detail.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'illustrators/:id', component: IllustratorDetailComponent},
   {path: 'illustrators', component: IllustratorsComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
   {path: '', redirectTo: '/mangas', pathMatch: 'full'}
   
 ];

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'manga-list-frontend';
+  username:string = '';
+
+  getUsername(): string {
+    this.username = sessionStorage.getItem("username")?.toString() || "";
+    return this.username;
+  }
+
+  logout(){
+    sessionStorage.clear();
+  }
 }

@@ -23,9 +23,6 @@ export class RegisterComponent implements OnInit {
   }
 
   public register(){
-    console.log(this.user.username);
-    console.log(this.user);
-
     if(!this.vaildateForm()){
       this.showWrongFields = true;
     } else{
@@ -34,16 +31,12 @@ export class RegisterComponent implements OnInit {
       this.userService.register(this.user).subscribe(d=> {
         this.data = d;
 
-        console.log(this.data);
-
         if(this.data.message === "User registered successfully!"){
           this.registered = true;
           this.user.username = "";
           this.user.email = "";
           this.user.password= "";
         }
-
-        console.log(this.registered);
       });
     }
   
