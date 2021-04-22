@@ -8,6 +8,7 @@ import { MangaDetailComponent } from './manga-detail/manga-detail.component';
 import { MangasComponent } from './mangas/mangas.component';
 import { PublisherDetailComponent } from './publisher-detail/publisher-detail.component';
 import { PublishersComponent } from './publishers/publishers.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path: 'publishers/:id', component:PublisherDetailComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'authors', component: AuthorsComponent},
   {path: 'illustrators/:id', component: IllustratorDetailComponent},
   {path: 'illustrators', component: IllustratorsComponent},
+  {path: 'register', component: RegisterComponent},
   {path: '', redirectTo: '/mangas', pathMatch: 'full'}
   
 ];

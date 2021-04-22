@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row justify-content-center" id="title-row">
+        <h3>Create your account</h3>
+    </div>
+    <div class="row justify-content-center" id="register-row">
+        <div class="col-md-4 col-sm-4">
+            <div class="alert alert-success" role="alert" *ngIf="registered">
+                Registered succesfully! You can now login.
+              </div>
+        <form>
+            <div class="form-group">
+              <div class="alert alert-danger" role="alert" *ngIf="usernameEmpty && showWrongFields">
+                Username cannot be empty
+              </div>
+                <label for="email">Username*</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" [(ngModel)]="user.username">
+              </div>
+            <div class="form-group">
+              <div class="alert alert-danger" role="alert" *ngIf="emailEmpty && showWrongFields">
+                Email is invalid
+              </div>
+              <label for="email">Email address*</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" [(ngModel)]="user.email">
+            </div>
+            <div class="form-group">
+              <div class="alert alert-danger" role="alert" *ngIf="passwordEmpty && showWrongFields">
+                Password cannot be empty
+              </div>
+              <label for="password">Password*</label>
+              <input type="password" class="form-control" id="password" name ="password" placeholder="Password" [(ngModel)] ="user.password">
+            </div>
+            <button type="button" class="btn btn-primary float-right" (click)= "register()">Register</button>
+          </form>
+        </div>
+    </div>
+</div>

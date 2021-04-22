@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -14,6 +15,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { IllustratorsComponent } from './illustrators/illustrators.component';
 import { IllustratorDetailComponent } from './illustrator-detail/illustrator-detail.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { IllustratorDetailComponent } from './illustrator-detail/illustrator-det
     AuthorsComponent,
     AuthorDetailComponent,
     IllustratorsComponent,
-    IllustratorDetailComponent
+    IllustratorDetailComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

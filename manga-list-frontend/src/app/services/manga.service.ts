@@ -8,6 +8,7 @@ import { Manga } from '../models/manga';
 })
 export class MangaService {
   private mangasURL = "http://192.168.178.73:8080/mangas/"
+  // private mangasURL = "http://localhost:8080/mangas/"
 
   constructor(private http: HttpClient) { }
 

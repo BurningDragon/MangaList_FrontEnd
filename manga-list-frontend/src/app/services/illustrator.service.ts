@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class IllustratorService {
   private illustratorURL = "http://192.168.178.73:8080/illustrators/"
+  // private illustratorURL = "http://localhost:8080/illustrators/"
 
   constructor(private http: HttpClient) { }
 
